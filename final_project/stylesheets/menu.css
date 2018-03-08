@@ -1,0 +1,132 @@
+/* Style for the Menu */
+
+/* Tyopography */
+h1 {
+    font: bolder 54px 'Dosis', sans-serif;
+    text-align: center;
+}
+
+h2 {
+    background-image: url("../images/linenbg.jpg");
+    padding: 0 5%;
+    margin: 0 0;
+    font: bold 36px 'Dosis', sans-serif;
+    text-align: left;
+}
+
+h3 {
+    font: bold 24px 'Dosis', sans-serif;
+    text-align: center;
+    text-decoration: underline;
+}
+ul {
+    text-align: center;
+}
+
+.inli {
+    list-style: none;
+    text-align: center;
+}
+
+li {
+    text-align: justify;
+}
+/* Menu Layout */
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+h1 img {
+    margin: 0 2%;
+    vertical-align: middle;
+}
+
+#main {
+    margin: 0 auto;
+}
+
+#border {
+    margin: 5% 10%;
+    padding: 2%;
+    background-color: rgba( 0, 0, 0, .31);
+    border: double 6px #646464;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#border a,
+#border a:visited {
+    margin: 5px 5%;
+    font: bold 16px 'Dosis', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    float: right;
+}
+
+
+#border2 {
+    padding: 2%;
+    border: double 2px #646464;
+}
+
+.floatdrinks {
+    margin: 0 13%;
+    float: left;
+}
+
+#drinks {
+    border-top: double 4px #646464;
+}
+
+#Breakfast {
+    border-top: double 4px #646464;
+}
+
+#Breakfast img {
+    margin: 2% 2%;
+    box-shadow: 2px 5px 3px 0 #000;
+    float: right;
+}
+
+#Breakfast ul {
+    margin: 14% 0;
+}
+
+#Bakery {
+    border-top: double 4px #646464;
+}
+
+.floatbakery {
+    float: left;
+    margin: 0 2%;
+}
+
+#Sandwiches {
+    border-top: double 4px #646464;
+}
+
+#Sandwiches img {
+    margin: 2% 2%;
+    box-shadow: 2px 5px 3px 0 #000;
+    float: right;
+}
+
+#Sandwiches  ul {
+    margin: 14% 0;
+}
+
+#Soups {
+    border-top: double 4px #646464;
+}
+
+#Soups img {
+    margin: 2% 2%;
+    box-shadow: 2px 5px 3px 0 #000;
+    float: right;
+}
+
+
+#Soups  ul {
+    margin: 14% 0;
+}
+

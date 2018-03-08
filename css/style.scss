@@ -1,0 +1,191 @@
+$primaryColor:#3498db;
+$primaryColorBright: #0065A4;
+$primaryColorLight: #79CEFF;
+
+@mixin boxShadows($inValues) {
+  -webkit-box-shadow:$inValues;
+  -moz-box-shadow:$inValues;
+  box-shadow:$inValues;
+}
+
+/* Header */
+#social {
+  margin-top: 2rem;
+  float: right;
+}
+
+#social ul li {
+  text-align: right;
+  list-style-type: none;
+  display: inline-block;
+}
+
+#title {
+  margin-top: 5.5rem;
+  font-weight: bold;
+}
+
+h1 img {
+  margin-right: 5%;
+}
+
+/* Mobile Header */
+@media only Screen and (max-width: 991px) {
+  #social {
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    float: right;
+  }
+}
+
+@media only Screen and (max-width: 576px) {
+  #social {
+    margin-top: 3rem;
+    margin-bottom: .5rem;
+
+  }
+
+  #social ul li {
+    list-style-type: none;
+    display: block;
+  }
+
+}
+
+////////////////////
+/// Navigation  ///
+//////////////////
+
+.navbar-custom {
+    background-color: #FFFFFF;
+
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: $primaryColor;
+
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: $primaryColor;
+    font-size: 1.5rem;
+    font-family: 'Dosis', sans-serif;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: $primaryColorBright;
+    border-top: solid 1px $primaryColor;
+    border-bottom: solid 1px $primaryColor;
+}
+/* Borders Above/Below Current Page */
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+    color: $primaryColorLight;
+    border-top: solid 1px $primaryColor;
+    border-bottom: solid 1px $primaryColor;
+}
+
+/* Change Toggle Color For example, here I set the RGB value to pink (255,102,203). Notice the stroke=’rgba(255,102,203, 0.5)’ value in the SVG  */
+.custom-toggler.navbar-toggler {
+    border-color: $primaryColor;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(52, 152, 219, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.nav-link {
+  font-family: 'Dosis', sans-serif;
+}
+
+.dropdown-item {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.25rem;
+}
+
+hr {
+    height: 1px;
+    border-top: 1px solid $primaryColor;
+    margin: 0;
+}
+
+/* End Navigation */
+
+/* Main Content */
+
+.mainCols img,
+.mainCols p {
+  margin-top: 2%;
+}
+
+.active {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  overflow: hidden;
+}
+
+/* Footer */
+
+footer {
+  color: $primaryColor;
+  border-top: solid 1px $primaryColor;
+  background-color: #ffffff;
+}
+
+footer p {
+  margin-top:2%;
+}
+
+/*TYPOGRAPHY*/
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-bottom: 100px;
+}
+
+.primaryBold {
+  color: $primaryColor;
+  font-weight: bolder;
+}
+
+h1 {
+  color:$primaryColor;
+}
+
+//////////////
+/// Cards ///
+////////////
+
+.btn-primary:not([disabled]):not(.disabled):active, .btn-primary:not([disabled]):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #ffffff;
+  background-color: $primaryColor;
+  border-color: $primaryColorLight;
+  box-shadow: 0 0 0 0.2rem $primaryColorBright;
+}
+.btn-primary {
+  color: #fff;
+  background-color: $primaryColor;
+  border-color: $primaryColorBright;
+  margin: .15rem;
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+  background-color: $primaryColorLight;
+  border-color: $primaryColorBright;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  @include boxShadows(0 0 0 0.2rem $primaryColorLight);
+}
+
+.card {
+  width: 20rem;
+  margin: 1rem;
+  @include boxShadows(0 2px 5px 0 rgba(0, 0, 0, 0.16));
+}

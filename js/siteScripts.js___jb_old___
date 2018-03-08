@@ -1,0 +1,13 @@
+var downArrow = true;
+
+function arrowSwap(inputLink) {
+  var x = document.getElementById(inputLink);
+if(downArrow) {
+  x.innerHTML = "&#8679; Project Links &#8679;";
+  downArrow = false;
+}
+else {
+  x.innerHTML = "&#8681; Project Links &#8681;";
+  downArrow = true;
+}
+}

@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Tutorial 5, Case Problem 3
+Your Name: R. William Brown
+Today's Date: 3/28/2017 */
+
+body{
+	background-image: url(images/spiralbound.jpg);
+	background-repeat: repeat-y;
+	background-color: gainsboro;
+	font: 1.2em Arial, Helvetica, sans-serif;
+	margin-left: 8em;
+	line-height: 1.25em;
+}
+img{
+	float:right;
+	margin: 0 0 10px 10px
+}
+
+h1{
+	margin-top: .5em;
+	text-align: center;
+	font-size: 3em;
+	padding-bottom: 25px;
+}
+
+h2{
+	background-image: url(images/grey_texture.jpg);
+	text-align: center;
+	color: white;
+	font-size: 1.4em;
+	padding: 10px;
+}
+
+h3{
+	color: teal;
+	font-size: 1.3em;
+	text-decoration: overline underline;
+}
+
+footer{
+	text-align: center;
+	color: white;
+	background-color: black;
+	float: right;
+	padding: 10px;
+	text-transform: capitalize;
+}
+
+.border{
+	border-top: solid teal .4em;
+	padding-top: .4em;
+	font-weight: bold;
+	font-style: italic;
+	color: teal;
+	margin-bottom: 0;
+}
+
+ul{
+	float: left;
+	list-style-type: none;
+	padding: 0;
+	margin; 1em 0 0 1em;
+}
+
+li{
+	background-image: url(images/teal_square_bullet.jpg);
+	background-repeat: no-repeat;
+	padding: 0 0 .25em 2em;
+	line-height: 1.5em;
+}

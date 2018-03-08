@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/*  Tutorial 5, Case Problem 4
+    Your Name: R. William Brown
+    Today's Date: 3/28/2017 */
+
+
+
+/* Base */
+
+.wrapper{
+    margin: 2% auto;
+    min-width: 920px;
+    width: 90%;
+    max-width: 1920px;
+}
+
+/* Advanced CSS Class Code vvvv */
+div>h2 {
+    background-color: #323232;
+    margin: 10px;
+    font: bold 2em Georgia, serif;
+    text-decoration: underline;
+    text-indent: 10px;
+}
+
+div>p {
+    background-color: #646464;
+    font: 1em Georgia, serif;
+    padding: 10px;
+}
+p::first-letter {
+    font: bold 2.5em Georgia, serif;
+    color: #00a0d2;
+}
+
+
+::selection {
+    color: greenyellow;
+    background: #000;
+}
+
+[title~=Capital] {
+    margin: 10px;
+    padding: 0;
+    float:left;
+}
+
+[title~=Life] {
+    margin: 10px;
+    padding: 0;
+    float:right;
+}
+
+img[alt*="life"], img[alt*="Capital"] {
+    box-shadow: 2px 4px 3px 0 black;
+}
+/* Advanced CSS Class Code ^^^ */
+
+/* Text */
+
+h1 {
+    font: bold 5em Georgia, serif;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+/* Header */
+
+.banner {
+    background-image: url(images/newhopebanner.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 5px solid gainsboro;
+    height: 339px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 10px;
+
+
+}
+
+.banner img {
+    float: left;
+    border-radius: 25px 75px;
+    margin: 50px 0 50px 50px;
+}
+
+.banner h2 {
+    text-align: center;
+    color: white;
+    font: bold 2em Georgia, serif;
+}
+
+/* Main */
+body {
+    background-color: black;
+    color: white;
+}
+
+.content {
+    border: 5px solid gainsboro;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin: 10px;
+    background: #646464;
+}
+
+.clear {
+    clear: both;
+}
+
+p {
+    margin: 10px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    margin: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    background-color: #646464;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+footer a:hover {
+    opacity: .7;
+}
+
+

@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 		
+Author: R. William Brown	
+Date: 1/31/2017
+*/
+
+/*Body*/
+body{background-color: #c0e59b;
+font-family: Verdana,sans-serif;}
+
+/*H1*/
+h1{text-align: center;
+}
+/*H2*/
+h2{color: navy;
+}
+/*H3*/
+h3{color: navy;
+font-weight: bold;}
+
+/*H4*/
+h4{color: maroon;
+text-transform: uppercase;
+font-style: italic;}
+
+/*Paragraphs*/
+
+p{text-indent: 5em;
+line-height: 1.5em}

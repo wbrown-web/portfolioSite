@@ -1,0 +1,31 @@
+<html>
+
+<head>
+  <title></title>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script>
+      $(document).ready(function(){
+        $("#firstP").css("color", "green"); //chance the first p to green
+        $("#button1").click(function() {
+          $("h1").css({
+            'background-color': 'yellow',
+            'font-size': '3em'
+          }
+          )
+        }); //changed the h1 to have a yellow bg and a different size
+      });
+</script>
+</head>
+
+<body>
+  <h1> Advanced JavaScript</h1>
+  <script>
+    document.write("<h2>JQuery Example</h2>"); //output a heading
+    $("body").append("<h2>JQuery Example JQuery</h2>");
+  </script>
+  <p id="firstP">Change this line.</p>
+  <button id="button1">Click ME!</button>
+
+</body>
+
+</html>

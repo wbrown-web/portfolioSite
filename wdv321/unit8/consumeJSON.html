@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>WDV321 Advanced Javascript - AJAX Text Example</title>
+
+  <script src="jquery-2.1.4.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $("#button1").click(function() {
+        $.getJSON("900006361.json", function(data) {
+          var items = [];
+          $.each(data, function(key, val) {
+            items.push("<li id='" + key + "'>" + val + "</li>");
+          });
+
+          $("<ul/>", {
+            "class": "my-new-list",
+            html: items.join("")
+          }).appendTo("body");
+        });
+      });
+
+      $("#button2").click(function() {
+        $.getJSON("900668871.json", function(data) {
+          var items = [];
+          $.each(data, function(key, val) {
+            items.push("<li id='" + key + "'>" + val + "</li>");
+          });
+
+          $("<ul/>", {
+            "class": "my-new-list",
+            html: items.join("")
+          }).appendTo("body");
+        });
+      });
+
+
+      $("#button3").click(function() {
+        $.getJSON("903998004.json", function(data) {
+          var items = [];
+          $.each(data, function(key, val) {
+            items.push("<li id='" + key + "'>" + val + "</li>");
+          });
+
+          $("<ul/>", {
+            "class": "my-new-list",
+            html: items.join("")
+          }).appendTo("body");
+        });
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <body>
+
+    <h1>WDV321 Advanced Javascript</h1>
+    <h2>Consuming JSON Objects</h2>
+
+    <button type="button" id="button1">Get First JSON object 1</button>
+    <button type="button" id="button2">Get First JSON object 2</button>
+    <button type="button" id="button3">Get First JSON object 3</button>
+
+
+
+
+  </body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV321 Advanced Javascript - Form Validation Project</title>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+function validateName(inName)
+{
+  var nameRegex = /^[^±!@£$%^&*_+§¡€#¢§¶•ªº«\\/<>?:;|=.,]{1,20}$/;
+  return nameRegex.test(inName);
+}//end validateName()
+
+function validatePhone(inPhone)
+{
+  var phoneRegex = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}/;
+  return phoneRegex.test(inPhone);
+}
+
+function validateRadio(inRadio)
+{
+  var isChecked = $("input[name=custProducts]:checked").val();
+  return isChecked;
+}
+
+function validateComplaint(inComplaint)
+{
+  var complaintRegex = /[<>']/g;
+  return complaintRegex.test(inComplaint);
+}
+
+
+function validateForm()
+{
+  //alert("inside validateForm()");
+  //Remove error messages and styles
+  $(".errMsg").html("");
+  $("span").removeClass("errMsg");
+  var validForm = true;	//assume all Valid
+
+  //Validate Phone field
+    //alert( $("#custName").val() );
+    //alert( validatePhone($("custName").val()) );
+  if(! validateName($("#custName").val()) )
+  {
+    //alert("Failed");
+    $("#custName + span").addClass("errMsg");
+    $("#custName + span").html("Invalid Name");
+    validForm = false;
+  }
+
+  if(! validatePhone($("#custPhone").val()) )
+  {
+    $("#custPhone + span").addClass("errMsg");
+    $("#custPhone + span").html("Invalid Phone Number");
+    validForm = false;
+  }
+
+  if(! validateRadio($("input[name=custProducts]:checked")) ){
+    $("#radioError").addClass("errMsg");
+    $("#radioError").html("Please Check One");
+    validForm = false;
+  }
+
+  if( validateComplaint($("#custComplaint").val()) )
+  {
+    $("#complaintError").addClass("errMsg");
+    $("#complaintError").html("Please Describe Your Complaint. < > are not allowed.");
+    validForm = false;
+  }
+
+
+
+  //End of all validations
+  if(validForm)
+  {
+    alert("Form submitted! Thank you!");
+  }
+}
+
+
+</script>
+<style>
+
+label	{
+	width:150px;
+	display:inline-block;
+}
+
+
+.errMsg	{
+    background-color: red;
+  }
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+	<h2>WDV321 Advanced Javascript </h2>
+	<h3>Form Validation Project - Complaint Form</h3>
+	<form id="form1" name="form1" method="post" action="">
+	  <p>Please enter the following information in order to process your concerns.</p>
+	  <p>
+	    <label for="custName">Name:</label>
+	  	<input type="text" name="custName" id="custName" /><span></span>
+	  </p>
+	  <p>
+	    <label for="custPhone">Phone Number: (555-555-5555) </label>
+	    <input type="text" name="custPhone" id="custPhone" /><span></span>
+	  </p>
+	  <p>Please Select Product Group:</p><span id="radioError"></span>
+	  <p>
+	    <label>
+	      <input type="radio" name="custProducts" value="books" id="custProducts_0" />
+	      Books</label>
+	    <br />
+	    <label>
+	      <input type="radio" name="custProducts" value="movies" id="custProducts_1" />
+	      Movies</label>
+	    <br />
+	    <label>
+	      <input type="radio" name="custProducts" value="electronics" id="custProducts_2" />
+	      Consumer Electronics</label>
+	    <br />
+	    <label>
+	      <input type="radio" name="custProducts" value="computer" id="custProducts_3" />
+	      Computer</label>
+	    <br />
+	  </p>
+	  <p>Description of problem:	(Limit 200 characters)</p><span id="complaintError"></span>
+	  <p>
+  <label for="custComplaint"></label>
+	    <textarea name="custComplaint" id="custComplaint" cols="45" rows="5" maxlength="200"></textarea>
+
+      </p>
+	  <p>
+	    <input type="button" name="button" id="button" value="File Complaint" onclick="validateForm()"/>
+	    <input type="reset" name="button2" id="button2" value="Reset" />
+	  </p>
+</form>
+	<p>&nbsp;</p>
+</body>
+</html>

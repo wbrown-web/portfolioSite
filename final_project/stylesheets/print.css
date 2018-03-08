@@ -1,0 +1,87 @@
+@page {
+    size: 8.5in 11in;
+    margin: .5in;
+}
+
+/* Hides Elements */
+
+header,
+nav,
+footer,
+img {
+    display: none;
+}
+
+#main a {
+    display: none;
+}
+
+#wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper2 {
+    margin: 0;
+    padding: 0;
+}
+#border {
+    margin: 0;
+    padding: 0;
+}
+
+#border2 {
+    margin: 0;
+    padding: 0;
+}
+#main {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 22pt;
+}
+
+h2 {
+    font-size: 16pt;
+}
+
+h3 {
+    font-size: 14pt;
+}
+
+#main {
+    color: #000;
+    background-color: #fff;
+    background-image: none;
+    font: 10pt "Times New Roman", Times, serif;
+    line-height: 120%;
+}
+
+.floatdrinks {
+    margin: 0;
+    float: left;
+}
+
+.floatbakery {
+    float: left;
+    margin: 0;
+}
+
+#Breakfast ul {
+    margin: 0;
+}
+
+#Sandwiches  ul {
+    margin: 0;
+}
+
+#Soups  ul {
+    margin: 0;
+}
+
+a {
+    text-decoration: underling;
+    color: #0000ff;
+}

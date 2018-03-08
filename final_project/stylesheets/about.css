@@ -1,0 +1,32 @@
+/* Content */
+#main {
+    text-align: center;
+}
+
+#main h1 {
+    max-width: 20%;
+    margin: 0 auto 15px auto;
+    text-decoration: underline;
+    font-size: 48px;
+    background-color: rgba(0, 0, 0, .31);
+}
+
+#main p {
+    margin: 0 auto 15px auto;
+    padding: 5px;
+    text-indent: 20px;
+    text-align: justify;
+    line-height: 30px;
+    max-width: 60%;
+    background-color: rgba(0, 0, 0, .31);
+}
+
+#main a {
+    font-weight: bold;
+    color: #fff;
+}
+
+img {
+    margin: 0 10px 15px 0;
+    box-shadow: 2px 5px 3px 0 #000;
+}

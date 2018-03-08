@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 		
+Author: R. William Brown	
+Date: 1/31/2017
+*/
+
+/* body */
+body {font-size:1.2em; 
+font:Arial, Helvetica, sans-serif;
+background-color:#e6e6fa;
+}
+
+/* emphasized text */		
+em {color:green;
+	font-weight:bold;
+}
+
+/* H3 Headings */
+
+h3 {color:maroon;
+	text-transform:uppercase;
+	text-align:right;
+	font-size:1.3em;
+	font:"Times New Roman", Times, serif;
+}
+

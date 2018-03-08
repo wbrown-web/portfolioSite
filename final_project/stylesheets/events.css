@@ -1,0 +1,71 @@
+/* Main */
+
+#main {
+    margin: 0 auto;
+    width: 960px;
+    background-image: url("../images/coffeebg.jpg");
+    background-color: #000;
+    overflow: hidden;
+}
+.center {
+    margin: 0 auto;
+}
+/* Left Side */
+
+#leftcol {
+    width: 580px;
+    float: left;
+    text-align: center;
+}
+
+#leftcol p {
+    line-height: 30px;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, .31);
+    margin: 15px 0;
+    padding: 5px;
+
+}
+
+#leftcol a {
+    font-weight: bold;
+    color: #fff;
+}
+/* Right Side */
+
+#rightcol {
+    width: 380px;
+    float: left;
+}
+
+#rightcol img {
+    margin: 30px 0 30px 10px;
+    box-shadow: 2px 5px 3px 0 #000;
+
+}
+
+/* Table */
+
+table {
+    margin: 10px 0;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.31);
+    border: solid 4px #646464;
+}
+
+th {
+    border: solid 2px #646464;
+    padding: 5px;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+td {
+    border: solid 2px #646464;
+    padding: 5px;
+    font-size: 14px;
+}
+.booked {
+    background-color: black;
+}

@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+Author: R. William Brown
+Date: 2/6/2017
+*/
+
+/*Body*/
+body{font-size: 1.1em;
+font-family: Arial, Helvetica, sans-serif;
+background-color: #c19b76;
+}
+
+/*H1*/
+h1{font-style: italic;
+font-weight: normal;
+font-family: Cooper-Black, serif;
+font-size: 150%
+}
+
+/*H2 & H3*/
+h2, h3{color: white;
+background-color:teal;
+}
+
+/*H4*/
+h4{font-variant: small-caps;
+}
+
+/*em*/
+em{color: green;
+    font-style: normal;
+    font-weight: bolder;
+}

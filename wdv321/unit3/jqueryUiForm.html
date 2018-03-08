@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<body>
+<form>
+<p>Date: <input type="text" id="datepicker"></p>
+<p>
+  <fieldset>
+    <legend>What is your favorite type of hero? </legend>
+    <label for="radio-1">Tank</label>
+    <input type="radio" name="radio-1" id="radio-1">
+    <label for="radio-2">Support</label>
+    <input type="radio" name="radio-1" id="radio-2">
+    <label for="radio-3">DPS</label>
+    <input type="radio" name="radio-1" id="radio-3">
+  </fieldset>
+</p>
+</p>
+<div>
+<label for="maps">Select a map:</label>
+<select name="maps" id="maps">
+<optgroup label="Payload">
+  <option value="Dorado">Dorado</option>
+  <option value="Route 66">Route 66</option>
+  <option value="Gibraltar">Gibraltar</option>
+  <option value="Gibraltar">Junkertown</option>
+</optgroup>
+<optgroup label="King of the hill">
+  <option value="Illios">Illios</option>
+  <option value="Lijiang Tower">Lijiang Tower</option>
+  <option value="Nepal">Nepal</option>
+  <option value="Oasis">Oasis</option>
+</optgroup>
+</select>
+</p>
+<p>
+  <a href="https://overwatchleague.com/en-us/" title="Overwatch League Homepage">Overwatch</a>
+<input title="What team will you be rooting for?">
+</p>
+</form>
+
+<script>
+//*** Date Picker ***//
+$( function() {
+  $( "#datepicker" ).datepicker({
+    numberOfMonths: 3,
+    showButtonPanel: true
+  });
+} );
+
+//*** Tooltip ***//
+$(document).tooltip();
+
+//*** Radio Inputs ***//
+$("input[type='radio']").checkboxradio();
+
+</script>
+</body>
+</html>

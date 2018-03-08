@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $(document).ready(function(e) {
+  $('#submit').click(function() {
+      var sEmail = $('#email').val();
+      if ($.trim(sEmail).length == 0) {
+          //alert("Please enter a valid e-mail");
+          $('#emailError').addClass("error");
+          $('#emailError').html("Please enter a valid E-mail");
+      }
+      if (validateEmail(sEmail)) {
+          //alert("E-mail is valid");
+          $('.error').html("");
+          $('span').removeClass('error');
+          $('#success').html("Your e-mail is valid");
+          $('#success').addClass("g2g");
+      }
+      else {
+        //alert("Please enter a valid e-mail");
+        $('#emailError').addClass("error");
+        $('#emailError').html("Please enter a valid E-mail");
+      }
+  });
+});
+
+function validateEmail(sEmail) {
+  var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+  if (filter.test(sEmail)) {
+      return true;
+  }
+  else {
+      return false;
+  }
+}
+
+function clearForm() {
+  $('#success').html("");
+  $('#emailError').html("");
+  $('span').removeClass('error');
+  $('#success').removeClass("g2g");
+}
+  </script>
+
+  <style>
+  .g2g {
+    background-color: #39FF14;
+    color: black;
+    font-size: 16px;
+  }
+
+  .error {
+    background-color: red;
+    color: black;
+    font-size: 16px;
+  }
+  </style>
+</head>
+<body>
+
+<form method="" name="myForm" action="">
+  <h2><span id="success"></span></h2>
+  <p>
+    E-mail: <input type="text" name="email" id="email"><span id="emailError"></span>
+  </p>
+<input type="button" value="submit" name="submit" id="submit">
+<input type="reset" value="reset" onClick="clearForm()">
+</form>
+
+
+</body>
+</html>

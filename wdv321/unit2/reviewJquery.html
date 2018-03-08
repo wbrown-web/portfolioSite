@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <title>WDV321 JS Review</title>
+  <script>
+//*** Team names ***//
+var teamNames = ["Dynasty", "Outlaws", "Mayhem", "Excelsior"];
+
+
+//**** Current date ***//
+  function currentDate() {
+    var d = new Date();
+    $("#todayDate").html(d.toDateString());
+  }
+
+  function testFormat(inNum) {
+      if (isNaN(inNum)) {
+          return false;
+      }
+      else {
+          inNum = parseFloat(inNum);
+          return '$' + inNum.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+      }
+  }
+
+    function priceMultiply() {
+      var price = $("#price").val();
+      var quantity = $("#quantity").val();
+      var total = price*quantity;
+      $("#priceTotal").html(testFormat(total));
+    }
+
+
+  </script>
+</head>
+<body>
+  <p><span id="todayDate"></span></p>
+  <script>
+    currentDate();
+  </script>
+<form>
+  <p>What is the price? <input type="number" id="price" name="price"></p>
+  <p>How many do you have? <input type="number" id="quantity" name="quantity"></p>
+  <p>Your total price will be: <span id="priceTotal"><em>result goes here!</em></span></p>
+  <input type="button" id="getTotal" name="getTotal" value="Get Total" onclick="priceMultiply()">
+</form>
+<p id="teamDisplay">
+  <script>
+    for (i=0; i < teamNames.length; i++) {
+      $("#teamDisplay").append("Team " + [i+1] + ": " + teamNames[i] + "<br>");
+    }
+  </script>
+</p>
+</body>
+</html>

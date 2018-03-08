@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+  #board {
+    height: 600px;
+    width: 300px;
+    border: 2px solid black;
+  }
+
+
+  #checker {
+    text-align: center;
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+
+  }
+
+  #box1 {
+    height: 300px;
+    width: 300px;
+    float: left;
+    border: 1px solid black;
+  }
+
+  #box1 p {
+    text-align: center;
+    background-color: yellow;
+  }
+
+  #box2 {
+    height: 300px;
+    width: 300px;
+    float: left;
+    border: 1px solid black;
+  }
+
+
+
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#checker" ).draggable({revert: "invalid"});
+    $( "#box1" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .find( "p" )
+            .html( "Next Turn" );
+      }, tolerance: "fit"
+    });
+  } );
+  </script>
+
+</head>
+
+<body>
+<div id="board">
+  <div id="box1">
+    <p></p>
+  </div>
+  <div id="box2">
+    <div id="checker">
+    <p>Checker</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

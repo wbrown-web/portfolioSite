@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>WDV321 Advanced Javascript</title>
+	
+	<script src="files/jquery-3.2.1.js"></script>
+	
+	<script>
+	
+		function validateEmail(inEmail)
+		{
+			var emailPattern = new RegExp("@");
+			return emailPattern.test(inEmail);		
+		}//end validateEmail()
+	
+	
+		function validateForm()
+		{
+			//alert("inside validateForm()");
+			//Remove error messages and styles
+			$(".errMsg").html("");
+			$("span").removeClass("errMsg");
+			var validForm = true;	//assume all Valid
+			
+			//Validate Email field
+				//alert( $("#emailAddress").val() );
+				//alert( validateEmail($("#emailAddress").val()) );
+			if(! validateEmail($("#emailAddress").val()) )
+			{
+				//alert("Failed");
+				$("#emailAddress + span").addClass("errMsg");
+				$("#emailAddress + span").html("Invalid Email");				
+				validForm = false;
+			}
+			
+			
+			//End of all validations
+			if(validForm)
+			{
+				alert("Form submitted! Thank you!");
+			}
+		}//end validateForm()
+	
+	
+	</script>
+	
+	<style>
+	
+		.errMsg	{
+			background-color: red;
+		}
+	
+	</style>
+
+</head>
+
+<body>
+
+	<h1>WDV321 Advanced Javascript</h1>
+	<h2>JQuery Form Validation Example</h2>
+	
+	<form method="post" action="#">
+	
+		<p>Email: 
+			<input type="text" name="emailAddress" id="emailAddress"><span></span>
+		</p>
+	
+		<p>
+			<!-- Change this element for validating
+				<input type="submit" value="Submit">
+			-->
+			
+			<input type="button" value="Submit" onclick="validateForm()">
+			
+			<input type="reset" value="Try Again">
+		</p>
+	
+	</form>
+
+
+</body>
+</html>

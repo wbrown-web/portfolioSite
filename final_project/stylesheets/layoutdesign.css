@@ -1,0 +1,26 @@
+/* Base */
+
+#wrapper1 {
+    margin: 0 auto;
+    max-width: 75%;
+    background-color: #000;
+}
+
+#wrapper2 {
+    margin: 5px auto 0 auto;
+    background: #000 url("../images/coffeebg.jpg") center no-repeat;
+    background-attachment: scroll;
+    max-width: 75%;
+    overflow: hidden;
+}
+
+body {
+    background-color: #000;
+    font: 16px 'Source Sans Pro', sans-serif;
+    color: #fff;
+}
+
+.clear {
+    clear: both;
+}
+

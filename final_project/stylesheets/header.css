@@ -1,0 +1,56 @@
+/* Header, Menu and Footer */
+
+/* Header and Menu */
+header {
+    margin: 0 auto;
+    background-color: #000;
+}
+
+nav {
+    margin: 0 auto;
+    color: #FFF;
+    text-align: center;
+    border-bottom: solid 1px #646464;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 5%;
+}
+
+.menu a,
+.menu a:visited {
+    font-family: 'Dosis', sans-serif;
+    color: #FFF;
+    font-size: 24px;
+}
+
+.menu a:hover {
+    color: #646464;
+}
+
+/* Footer */
+footer {
+    margin: 0 auto;
+    max-width: 75%;
+    text-align: center;
+    padding: 5px;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer li {
+    display: inline-block;
+    margin: 0 2.5%;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}

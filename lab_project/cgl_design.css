@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* No inline CSS styling used as it is my understanding to avoid inline as much as possible. I instead used selectors to
+get the same effect. */
+
+
+/* Base */
+.container {
+    margin: 2% auto;
+    max-width: 1085px;
+    position: relative;
+
+}
+/* Text */
+body {
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+h1{
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.8em;
+    line-height: 80px;
+}
+h2 {
+    color: #993333;
+}
+header a,
+nav a,
+footer a{
+    text-decoration: none;
+}
+.underline em {
+    text-decoration: underline;
+}
+
+p {
+    font: 1.2em arial, sans-serif;
+    line-height: 2em;
+}
+
+.bold,
+.bold a {
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.resources,
+.resources a,
+.resources ul
+{
+    font-weight: bold;
+    text-align: center;
+    list-style-type: none;
+
+}
+
+.uglygreen {
+    color: #3d9e3d;
+}
+/* Header */
+.banner {
+    background-color: #FFFFFF;
+    border: 5px solid black;
+    padding: 5px 20px;
+    height: 140px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.banner img {
+    float: left;
+    padding-right: 15px;
+}
+.banner a{
+    color: #51642a;
+}
+
+
+/* Navigation */
+.menu {
+    margin: 0px;
+    padding: 0;
+    background-color: #7eae62;
+    border: 1px solid #000000;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 2px 0px 0px rgba(33, 116, 10, 0.28);
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a,
+.menu a:visited {
+    box-shadow: 1px 1px 0px 1px #21740a;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #7eae62;
+    color: #000000;
+}
+
+.menu a:hover {
+    background-color: #B0B366;
+}
+/* Main */
+
+main {
+    margin: 40px;
+}
+.center {
+    text-align: center;
+}
+
+.center img {
+    box-shadow: 2px 2px 2px 0px #646464;
+}
+
+.center a {
+    text-decoration: none;
+    color: #3d9e3d;
+
+}
+
+.center a:hover {
+    color: #993333;
+}
+
+.treebullets {
+    list-style-image: url("images/tiny_tree.gif")
+}
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 12px;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 8px;
+}
